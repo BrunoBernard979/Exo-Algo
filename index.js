@@ -8,8 +8,9 @@
 // Ajuste la fonction "multiply" qui prend deux paramètres (a et b) et retourne la somme multipliée des deux paramètres.
 // Exemple : a = 2, b = 3 => 2 * 3 = 6
 
-export const multiply = (a, b) => {};
-
+export const multiply = (a, b) => {
+    return a*b;
+};
 console.info("Exercice 1 :", multiply(2, 3));
 
 //----------------------------------------------------------------------------------------------//
@@ -19,6 +20,12 @@ console.info("Exercice 1 :", multiply(2, 3));
 // Exemple : [1, 2, 3] => 1
 
 // export const getFirstElement = () => {}
+
+function getFirstElement(array) {
+        return array[0];
+}
+console.info("Exercice 2 : ", getFirstElement([1, 2, 3]));
+
 
 // console.info("Exercice 2 : ", getFirstElement([1, 2, 3]));
 
@@ -31,6 +38,13 @@ console.info("Exercice 1 :", multiply(2, 3));
 // export const removeLastElement = () => {
 // };
 
+
+function removeLastElement(array) {
+    array.pop();
+    return array;
+}
+console.info("Exercice 3 : ", removeLastElement([1, 2, 3]));
+
 // console.info("Exercice 3 : ", removeLastElement([1, 2, 3]));
 
 //----------------------------------------------------------------------------------------------//
@@ -40,6 +54,9 @@ console.info("Exercice 1 :", multiply(2, 3));
 // Exemple : [1, 2, 3] => 6
 
 // export const sumArray = () => {}
+
+
+
 
 // console.info("Exercice 4 : ", sumArray([5, 6, 7]));
 
@@ -51,6 +68,11 @@ console.info("Exercice 1 :", multiply(2, 3));
 
 // export const reverseString = () => {}
 
+function reverseString(string){
+    return string.split('').reverse().join('');
+}
+console.info("Exercice 5 : ", reverseString("Hello"));
+
 // console.info("Exercice 5 : ", reverseString("Hello"));
 
 //----------------------------------------------------------------------------------------------//
@@ -60,7 +82,10 @@ console.info("Exercice 1 :", multiply(2, 3));
 // Exemple : [1, 2, 3] => 3
 
 // export const getMax = () => {}
-
+function getMax(array){
+    return Math.max(...array);
+}
+console.info("Exercice 6 : ", getMax([1, 2, 3]));
 // console.info("Exercice 6 : ", getMax([1, 2, 3]));
 
 //----------------------------------------------------------------------------------------------//
@@ -70,6 +95,11 @@ console.info("Exercice 1 :", multiply(2, 3));
 // Exemple : [1, 2, 3] => 1
 
 // export const getMin = () => {}
+
+    function getMin(array){
+        return Math.min(...array);
+    }
+    console.info("Exercice 7 : ", getMin([1, 2, 3]));
 
 // console.info("Exercice 7 : ", getMin([1, 2, 3]));
 
@@ -81,6 +111,12 @@ console.info("Exercice 1 :", multiply(2, 3));
 
 // export const removeVowels = () => {}
 
+function removeVowels(string){
+// 
+return string.replace(/[aeiouyAEIOUY]/g, "");
+}
+console.info("Exercice 8 : ", removeVowels("Hello"));
+
 // console.info("Exercice 8 : ", removeVowels("Hello"));
 
 //----------------------------------------------------------------------------------------------//
@@ -90,6 +126,11 @@ console.info("Exercice 1 :", multiply(2, 3));
 // Exemple : [1, 3, 2] => [1, 2, 3]
 
 // export const sortArray = () => {}
+
+function sortArray(array){
+return array.sort((a, b) => a - b);
+}
+console.info("Exercice 9 : ", sortArray([1, 3, 2]));
 
 // console.info("Exercice 9 : ", sortArray([1, 3, 2]));
 
@@ -102,6 +143,17 @@ console.info("Exercice 1 :", multiply(2, 3));
 // export const getStringRotations = () => {
 
 // };
+function getStringRotations(string){
+    const rotations = [];
+    // 
+    for (let i = 0; i < string.length; i++) {
+        const rotation = string.slice(i) + string.slice(0, i);
+        rotations.push(rotation);
+    }
+// 
+    return rotations;
+}
+console.info("Exercice 10 : ", getStringRotations("Hello"));
 
 // console.info("Exercice 10 : ", getStringRotations("Hello"));
 
@@ -113,6 +165,12 @@ console.info("Exercice 1 :", multiply(2, 3));
 
 // export const incrementArray = () => {}
 
+function incrementArray(array){
+// 
+    return array.map(element => element + 1);
+// 
+}
+console.info("Exercice 11 : ", incrementArray([1, 2, 3]));
 // console.info("Exercice 11 : ", incrementArray([1, 2, 3]));
 
 //----------------------------------------------------------------------------------------------//
